@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'ui_epsgiolookup.ui'
 #
-# Created: Tue Mar 25 19:39:38 2014
+# Created: Tue Mar 25 20:00:24 2014
 #      by: PyQt4 UI code generator 4.9.1
 #
 # WARNING! All changes made in this file will be lost!
@@ -31,7 +31,7 @@ class Ui_epsgiolookup(object):
         self.label.setFont(font)
         self.label.setObjectName(_fromUtf8("label"))
         self.tabWidget = QtGui.QTabWidget(epsgiolookup)
-        self.tabWidget.setGeometry(QtCore.QRect(10, 40, 621, 201))
+        self.tabWidget.setGeometry(QtCore.QRect(10, 40, 621, 251))
         self.tabWidget.setObjectName(_fromUtf8("tabWidget"))
         self.tab = QtGui.QWidget()
         self.tab.setEnabled(True)
@@ -43,7 +43,7 @@ class Ui_epsgiolookup(object):
         self.pushButton_EPSGSearch.setGeometry(QtCore.QRect(180, 30, 87, 27))
         self.pushButton_EPSGSearch.setObjectName(_fromUtf8("pushButton_EPSGSearch"))
         self.label_5 = QtGui.QLabel(self.tab)
-        self.label_5.setGeometry(QtCore.QRect(18, 33, 41, 20))
+        self.label_5.setGeometry(QtCore.QRect(18, 34, 41, 20))
         self.label_5.setObjectName(_fromUtf8("label_5"))
         self.tabWidget.addTab(self.tab, _fromUtf8(""))
         self.tab_2 = QtGui.QWidget()
@@ -55,10 +55,10 @@ class Ui_epsgiolookup(object):
         self.lineEdit_FullText.setGeometry(QtCore.QRect(10, 30, 221, 28))
         self.lineEdit_FullText.setObjectName(_fromUtf8("lineEdit_FullText"))
         self.pushButton_FullTextSearch = QtGui.QPushButton(self.tab_2)
-        self.pushButton_FullTextSearch.setGeometry(QtCore.QRect(140, 60, 87, 27))
+        self.pushButton_FullTextSearch.setGeometry(QtCore.QRect(240, 30, 87, 27))
         self.pushButton_FullTextSearch.setObjectName(_fromUtf8("pushButton_FullTextSearch"))
         self.listWidget = QtGui.QListWidget(self.tab_2)
-        self.listWidget.setGeometry(QtCore.QRect(240, 10, 361, 141))
+        self.listWidget.setGeometry(QtCore.QRect(10, 70, 591, 131))
         self.listWidget.setObjectName(_fromUtf8("listWidget"))
         self.tabWidget.addTab(self.tab_2, _fromUtf8(""))
         self.tab_3 = QtGui.QWidget()
@@ -70,10 +70,10 @@ class Ui_epsgiolookup(object):
         self.label_4.setObjectName(_fromUtf8("label_4"))
         self.tabWidget.addTab(self.tab_3, _fromUtf8(""))
         self.label_2 = QtGui.QLabel(epsgiolookup)
-        self.label_2.setGeometry(QtCore.QRect(10, 250, 391, 18))
+        self.label_2.setGeometry(QtCore.QRect(10, 310, 391, 18))
         self.label_2.setObjectName(_fromUtf8("label_2"))
         self.tableView_Results = QtGui.QTableView(epsgiolookup)
-        self.tableView_Results.setGeometry(QtCore.QRect(10, 280, 621, 221))
+        self.tableView_Results.setGeometry(QtCore.QRect(10, 340, 621, 191))
         sizePolicy = QtGui.QSizePolicy(QtGui.QSizePolicy.Maximum, QtGui.QSizePolicy.Expanding)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)

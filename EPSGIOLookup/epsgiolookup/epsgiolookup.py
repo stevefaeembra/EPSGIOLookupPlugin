@@ -94,9 +94,14 @@ class epsgiolookup:
         resptext = json.dumps(resp)
         header=['Key','Value']
         data_list=[]
-        lists = resp['results'][0]
-        for x in lists:
-                data_list.append((x,lists[x]))
+        try :
+            for result in resp['results']:
+                lists = result
+                print lists
+                for x in lists:
+                    data_list.append((x,lists[x]))
+        except:
+            data_list.append(("Error", "No matches found for %s" % self.dlg.lineEdit_FullText.text()))
         table_model = MyTableModel(self.dlg, data_list, header)
         self.dlg.tableView_Results.setModel(table_model)
         
