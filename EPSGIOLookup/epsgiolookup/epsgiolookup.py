@@ -87,11 +87,25 @@ class epsgiolookup:
         table_model = MyTableModel(self.dlg, data_list, header)
         self.dlg.tableView_Results.setModel(table_model)
         
+    def textquery(self, widget):
+        ''' do query based on text query'''
+        url = "http://epsg.io/?q=%s&format=json" % self.dlg.lineEdit_FullText.text()
+        resp = self.getjsonresponse(url)
+        resptext = json.dumps(resp)
+        header=['Key','Value']
+        data_list=[]
+        lists = resp['results'][0]
+        for x in lists:
+                data_list.append((x,lists[x]))
+        table_model = MyTableModel(self.dlg, data_list, header)
+        self.dlg.tableView_Results.setModel(table_model)
+        
     # run method that performs all the real work
     def run(self):
         # show the dialog
         self.dlg.show()
         self.dlg.pushButton_EPSGSearch.clicked.connect(self.epsgquery)
+        self.dlg.pushButton_FullTextSearch.clicked.connect(self.textquery)
         # Run the dialog event loop
         result = self.dlg.exec_()
         # See if OK was pressed

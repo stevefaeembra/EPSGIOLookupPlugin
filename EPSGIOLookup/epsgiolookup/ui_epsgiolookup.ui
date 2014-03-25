@@ -58,7 +58,7 @@
     </rect>
    </property>
    <property name="currentIndex">
-    <number>2</number>
+    <number>1</number>
    </property>
    <widget class="QWidget" name="tab">
     <property name="enabled">
@@ -224,7 +224,7 @@
     <bool>true</bool>
    </attribute>
    <attribute name="verticalHeaderDefaultSectionSize">
-    <number>50</number>
+    <number>30</number>
    </attribute>
   </widget>
  </widget>

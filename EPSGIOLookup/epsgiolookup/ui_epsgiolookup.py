@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'ui_epsgiolookup.ui'
 #
-# Created: Tue Mar 25 19:27:53 2014
+# Created: Tue Mar 25 19:39:38 2014
 #      by: PyQt4 UI code generator 4.9.1
 #
 # WARNING! All changes made in this file will be lost!
@@ -84,10 +84,10 @@ class Ui_epsgiolookup(object):
         self.tableView_Results.horizontalHeader().setDefaultSectionSize(120)
         self.tableView_Results.horizontalHeader().setSortIndicatorShown(True)
         self.tableView_Results.horizontalHeader().setStretchLastSection(True)
-        self.tableView_Results.verticalHeader().setDefaultSectionSize(50)
+        self.tableView_Results.verticalHeader().setDefaultSectionSize(30)
 
         self.retranslateUi(epsgiolookup)
-        self.tabWidget.setCurrentIndex(2)
+        self.tabWidget.setCurrentIndex(1)
         QtCore.QObject.connect(self.buttonBox, QtCore.SIGNAL(_fromUtf8("accepted()")), epsgiolookup.accept)
         QtCore.QObject.connect(self.buttonBox, QtCore.SIGNAL(_fromUtf8("rejected()")), epsgiolookup.reject)
         QtCore.QMetaObject.connectSlotsByName(epsgiolookup)
