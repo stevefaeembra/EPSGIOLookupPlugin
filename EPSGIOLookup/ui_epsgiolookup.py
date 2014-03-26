@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'ui_epsgiolookup.ui'
 #
-# Created: Wed Mar 26 11:16:17 2014
+# Created: Wed Mar 26 12:04:50 2014
 #      by: PyQt4 UI code generator 4.9.1
 #
 # WARNING! All changes made in this file will be lost!

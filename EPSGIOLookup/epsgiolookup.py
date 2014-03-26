@@ -118,6 +118,7 @@ class epsgiolookup:
         self.dlg.pushButton_EPSGSearch.clicked.connect(self.epsgquery)
         self.dlg.pushButton_FullTextSearch.clicked.connect(self.textquery)
         self.dlg.tableView_Results.clicked.connect(self.copytoclip)
+        self.dlg.tableView_Matches.clicked.connect(self.selectfromcandidates)
         # Run the dialog event loop
         result = self.dlg.exec_()
         # See if OK was pressed
@@ -125,8 +126,18 @@ class epsgiolookup:
             # do something useful (delete the line containing pass and
             # substitute with your code)
             pass
-        
+    
+    def selectfromcandidates(self, widget):
+        # select epsg code from search results table
+        r = widget.row()
+        c = 0 # pick epsg code
+        epsgcode=widget.child(r,c).data()
+        self.dlg.lineEditEPSGCode.setText(epsgcode)
+        self.dlg.plainTextEdit_Clipboard.setPlainText("")
+        self.epsgquery(widget)
+    
     def copytoclip(self, widget):
+        # copy selected cell contents to textbox from where we can copy it to clipboard
         r = widget.row()
         c = widget.column()
         cellval =  widget.child(r,c).data()
