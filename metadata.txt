@@ -24,12 +24,13 @@ email=stevendkay{at}gmail.com
 # changelog=
 
 # tags are comma separated with spaces allowed
-tags=
+tags=epsg,projection,lookup,dictionary,api,location
 
 homepage=
 tracker=
-repository=
+repository=https://github.com/stevefaeembra/EPSGIOLookupPlugin
 icon=icon.png
+
 # experimental flag
 experimental=True
 
