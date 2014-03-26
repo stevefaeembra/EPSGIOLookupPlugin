@@ -112,6 +112,7 @@ class epsgiolookup:
         self.dlg.show()
         self.dlg.pushButton_EPSGSearch.clicked.connect(self.epsgquery)
         self.dlg.pushButton_FullTextSearch.clicked.connect(self.textquery)
+        self.dlg.tableView_Results.clicked.connect(self.copytoclip)
         # Run the dialog event loop
         result = self.dlg.exec_()
         # See if OK was pressed
@@ -120,6 +121,12 @@ class epsgiolookup:
             # substitute with your code)
             pass
         
+    def copytoclip(self, widget):
+        r = widget.row()
+        c = widget.column()
+        cellval =  widget.child(r,c).data()
+        self.dlg.plainTextEdit_Clipboard.setPlainText(str(cellval))
+    
 class MyTableModel(QAbstractTableModel):
     def __init__(self, parent, mylist, header, *args):
         QAbstractTableModel.__init__(self, parent, *args)

@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'ui_epsgiolookup.ui'
 #
-# Created: Wed Mar 26 10:21:59 2014
+# Created: Wed Mar 26 11:16:17 2014
 #      by: PyQt4 UI code generator 4.9.1
 #
 # WARNING! All changes made in this file will be lost!
@@ -71,7 +71,7 @@ class Ui_epsgiolookup(object):
         self.label_2.setGeometry(QtCore.QRect(10, 310, 391, 18))
         self.label_2.setObjectName(_fromUtf8("label_2"))
         self.tableView_Results = QtGui.QTableView(epsgiolookup)
-        self.tableView_Results.setGeometry(QtCore.QRect(10, 340, 621, 191))
+        self.tableView_Results.setGeometry(QtCore.QRect(10, 340, 621, 111))
         sizePolicy = QtGui.QSizePolicy(QtGui.QSizePolicy.Maximum, QtGui.QSizePolicy.Expanding)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
@@ -83,9 +83,12 @@ class Ui_epsgiolookup(object):
         self.tableView_Results.horizontalHeader().setSortIndicatorShown(True)
         self.tableView_Results.horizontalHeader().setStretchLastSection(True)
         self.tableView_Results.verticalHeader().setDefaultSectionSize(30)
+        self.plainTextEdit_Clipboard = QtGui.QPlainTextEdit(epsgiolookup)
+        self.plainTextEdit_Clipboard.setGeometry(QtCore.QRect(10, 460, 621, 81))
+        self.plainTextEdit_Clipboard.setObjectName(_fromUtf8("plainTextEdit_Clipboard"))
 
         self.retranslateUi(epsgiolookup)
-        self.tabWidget.setCurrentIndex(1)
+        self.tabWidget.setCurrentIndex(0)
         QtCore.QMetaObject.connectSlotsByName(epsgiolookup)
 
     def retranslateUi(self, epsgiolookup):

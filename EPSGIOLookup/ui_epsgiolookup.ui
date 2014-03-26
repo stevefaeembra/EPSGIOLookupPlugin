@@ -42,7 +42,7 @@
     </rect>
    </property>
    <property name="currentIndex">
-    <number>1</number>
+    <number>0</number>
    </property>
    <widget class="QWidget" name="tab">
     <property name="enabled">
@@ -195,7 +195,7 @@
      <x>10</x>
      <y>340</y>
      <width>621</width>
-     <height>191</height>
+     <height>111</height>
     </rect>
    </property>
    <property name="sizePolicy">
@@ -219,6 +219,16 @@
    <attribute name="verticalHeaderDefaultSectionSize">
     <number>30</number>
    </attribute>
+  </widget>
+  <widget class="QPlainTextEdit" name="plainTextEdit_Clipboard">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>460</y>
+     <width>621</width>
+     <height>81</height>
+    </rect>
+   </property>
   </widget>
  </widget>
  <resources/>
