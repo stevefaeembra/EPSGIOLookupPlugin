@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'ui_epsgiolookup.ui'
 #
-# Created: Tue Mar 25 20:00:24 2014
+# Created: Wed Mar 26 10:08:28 2014
 #      by: PyQt4 UI code generator 4.9.1
 #
 # WARNING! All changes made in this file will be lost!
@@ -17,12 +17,7 @@ except AttributeError:
 class Ui_epsgiolookup(object):
     def setupUi(self, epsgiolookup):
         epsgiolookup.setObjectName(_fromUtf8("epsgiolookup"))
-        epsgiolookup.resize(653, 584)
-        self.buttonBox = QtGui.QDialogButtonBox(epsgiolookup)
-        self.buttonBox.setGeometry(QtCore.QRect(290, 540, 341, 32))
-        self.buttonBox.setOrientation(QtCore.Qt.Horizontal)
-        self.buttonBox.setStandardButtons(QtGui.QDialogButtonBox.Cancel|QtGui.QDialogButtonBox.Ok)
-        self.buttonBox.setObjectName(_fromUtf8("buttonBox"))
+        epsgiolookup.resize(653, 554)
         self.label = QtGui.QLabel(epsgiolookup)
         self.label.setGeometry(QtCore.QRect(10, 10, 331, 18))
         font = QtGui.QFont()
@@ -57,9 +52,12 @@ class Ui_epsgiolookup(object):
         self.pushButton_FullTextSearch = QtGui.QPushButton(self.tab_2)
         self.pushButton_FullTextSearch.setGeometry(QtCore.QRect(240, 30, 87, 27))
         self.pushButton_FullTextSearch.setObjectName(_fromUtf8("pushButton_FullTextSearch"))
-        self.listWidget = QtGui.QListWidget(self.tab_2)
-        self.listWidget.setGeometry(QtCore.QRect(10, 70, 591, 131))
-        self.listWidget.setObjectName(_fromUtf8("listWidget"))
+        self.tableView_Matches = QtGui.QTableView(self.tab_2)
+        self.tableView_Matches.setGeometry(QtCore.QRect(10, 70, 601, 131))
+        self.tableView_Matches.setAlternatingRowColors(True)
+        self.tableView_Matches.setSortingEnabled(False)
+        self.tableView_Matches.setObjectName(_fromUtf8("tableView_Matches"))
+        self.tableView_Matches.horizontalHeader().setStretchLastSection(True)
         self.tabWidget.addTab(self.tab_2, _fromUtf8(""))
         self.tab_3 = QtGui.QWidget()
         self.tab_3.setObjectName(_fromUtf8("tab_3"))
@@ -88,8 +86,6 @@ class Ui_epsgiolookup(object):
 
         self.retranslateUi(epsgiolookup)
         self.tabWidget.setCurrentIndex(1)
-        QtCore.QObject.connect(self.buttonBox, QtCore.SIGNAL(_fromUtf8("accepted()")), epsgiolookup.accept)
-        QtCore.QObject.connect(self.buttonBox, QtCore.SIGNAL(_fromUtf8("rejected()")), epsgiolookup.reject)
         QtCore.QMetaObject.connectSlotsByName(epsgiolookup)
 
     def retranslateUi(self, epsgiolookup):

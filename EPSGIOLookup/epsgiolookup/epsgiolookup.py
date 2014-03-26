@@ -84,6 +84,7 @@ class epsgiolookup:
         lists = resp['results'][0]
         for x in lists:
                 data_list.append((x,lists[x]))
+        self.dlg.tableView_Matches.setRowCount(len(data_list))
         table_model = MyTableModel(self.dlg, data_list, header)
         self.dlg.tableView_Results.setModel(table_model)
         
@@ -92,18 +93,19 @@ class epsgiolookup:
         url = "http://epsg.io/?q=%s&format=json" % self.dlg.lineEdit_FullText.text()
         resp = self.getjsonresponse(url)
         resptext = json.dumps(resp)
-        header=['Key','Value']
+        header=['EPSG','Name']
         data_list=[]
         try :
             for result in resp['results']:
                 lists = result
                 print lists
-                for x in lists:
-                    data_list.append((x,lists[x]))
+                name = lists['name']
+                code = lists['code']
+                data_list.append((code, name))
         except:
             data_list.append(("Error", "No matches found for %s" % self.dlg.lineEdit_FullText.text()))
         table_model = MyTableModel(self.dlg, data_list, header)
-        self.dlg.tableView_Results.setModel(table_model)
+        self.dlg.tableView_Matches.setModel(table_model)
         
     # run method that performs all the real work
     def run(self):
@@ -127,6 +129,8 @@ class MyTableModel(QAbstractTableModel):
     def rowCount(self, parent):
         return len(self.mylist)
     def columnCount(self, parent):
+        if not self.mylist:
+            return 0
         return len(self.mylist[0])
     def data(self, index, role):
         if not index.isValid():
