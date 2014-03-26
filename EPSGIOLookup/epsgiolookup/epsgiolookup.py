@@ -84,7 +84,6 @@ class epsgiolookup:
         lists = resp['results'][0]
         for x in lists:
                 data_list.append((x,lists[x]))
-        self.dlg.tableView_Matches.setRowCount(len(data_list))
         table_model = MyTableModel(self.dlg, data_list, header)
         self.dlg.tableView_Results.setModel(table_model)
         

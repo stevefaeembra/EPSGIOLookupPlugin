@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'ui_epsgiolookup.ui'
 #
-# Created: Wed Mar 26 10:08:28 2014
+# Created: Wed Mar 26 10:21:59 2014
 #      by: PyQt4 UI code generator 4.9.1
 #
 # WARNING! All changes made in this file will be lost!
@@ -44,7 +44,7 @@ class Ui_epsgiolookup(object):
         self.tab_2 = QtGui.QWidget()
         self.tab_2.setObjectName(_fromUtf8("tab_2"))
         self.label_3 = QtGui.QLabel(self.tab_2)
-        self.label_3.setGeometry(QtCore.QRect(10, 10, 241, 18))
+        self.label_3.setGeometry(QtCore.QRect(10, 10, 441, 18))
         self.label_3.setObjectName(_fromUtf8("label_3"))
         self.lineEdit_FullText = QtGui.QLineEdit(self.tab_2)
         self.lineEdit_FullText.setGeometry(QtCore.QRect(10, 30, 221, 28))
@@ -54,7 +54,7 @@ class Ui_epsgiolookup(object):
         self.pushButton_FullTextSearch.setObjectName(_fromUtf8("pushButton_FullTextSearch"))
         self.tableView_Matches = QtGui.QTableView(self.tab_2)
         self.tableView_Matches.setGeometry(QtCore.QRect(10, 70, 601, 131))
-        self.tableView_Matches.setAlternatingRowColors(True)
+        self.tableView_Matches.setAlternatingRowColors(False)
         self.tableView_Matches.setSortingEnabled(False)
         self.tableView_Matches.setObjectName(_fromUtf8("tableView_Matches"))
         self.tableView_Matches.horizontalHeader().setStretchLastSection(True)
@@ -95,10 +95,10 @@ class Ui_epsgiolookup(object):
         self.pushButton_EPSGSearch.setText(QtGui.QApplication.translate("epsgiolookup", "Search", None, QtGui.QApplication.UnicodeUTF8))
         self.label_5.setText(QtGui.QApplication.translate("epsgiolookup", "EPSG:", None, QtGui.QApplication.UnicodeUTF8))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab), QtGui.QApplication.translate("epsgiolookup", "By EPSG Code", None, QtGui.QApplication.UnicodeUTF8))
-        self.label_3.setText(QtGui.QApplication.translate("epsgiolookup", "Enter Text Query (e.g. Kansas)", None, QtGui.QApplication.UnicodeUTF8))
+        self.label_3.setText(QtGui.QApplication.translate("epsgiolookup", "Enter Text Query (e.g. Kansas), results limited to 10 best matches", None, QtGui.QApplication.UnicodeUTF8))
         self.pushButton_FullTextSearch.setText(QtGui.QApplication.translate("epsgiolookup", "Search", None, QtGui.QApplication.UnicodeUTF8))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_2), QtGui.QApplication.translate("epsgiolookup", "By Full Text Search", None, QtGui.QApplication.UnicodeUTF8))
-        self.label_4.setText(QtGui.QApplication.translate("epsgiolookup", "This widget lets you look up EPSG projection definitions using the API provided by epsg.info. You can look up using either the EPSG numeric code, or do a full text search to find a list of possible projections. Widget written by Steven Kay (@stevefaeembra)", None, QtGui.QApplication.UnicodeUTF8))
+        self.label_4.setText(QtGui.QApplication.translate("epsgiolookup", "This widget lets you look up EPSG projection definitions using the API provided by epsg.info. You can look up using either the EPSG numeric code, or do a full text search to find a list of possible projections. The API only returns the first page of matches (10); to get the full list, you\'ll need to use the website. Widget written by Steven Kay (@stevefaeembra)", None, QtGui.QApplication.UnicodeUTF8))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_3), QtGui.QApplication.translate("epsgiolookup", "About", None, QtGui.QApplication.UnicodeUTF8))
         self.label_2.setText(QtGui.QApplication.translate("epsgiolookup", "Results - click on a cell to copy to clipboard", None, QtGui.QApplication.UnicodeUTF8))
 

@@ -100,12 +100,12 @@
       <rect>
        <x>10</x>
        <y>10</y>
-       <width>241</width>
+       <width>441</width>
        <height>18</height>
       </rect>
      </property>
      <property name="text">
-      <string>Enter Text Query (e.g. Kansas)</string>
+      <string>Enter Text Query (e.g. Kansas), results limited to 10 best matches</string>
      </property>
     </widget>
     <widget class="QLineEdit" name="lineEdit_FullText">
@@ -141,7 +141,7 @@
       </rect>
      </property>
      <property name="alternatingRowColors">
-      <bool>true</bool>
+      <bool>false</bool>
      </property>
      <property name="sortingEnabled">
       <bool>false</bool>
@@ -165,7 +165,7 @@
       </rect>
      </property>
      <property name="text">
-      <string>This widget lets you look up EPSG projection definitions using the API provided by epsg.info. You can look up using either the EPSG numeric code, or do a full text search to find a list of possible projections. Widget written by Steven Kay (@stevefaeembra)</string>
+      <string>This widget lets you look up EPSG projection definitions using the API provided by epsg.info. You can look up using either the EPSG numeric code, or do a full text search to find a list of possible projections. The API only returns the first page of matches (10); to get the full list, you'll need to use the website. Widget written by Steven Kay (@stevefaeembra)</string>
      </property>
      <property name="alignment">
       <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
